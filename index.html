@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Одностраничный типографическое портфолио на JQuery</title>
+	<meta charset="utf-8" />
+    <script type="text/javascript" src="jquery-1.5.2.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#nav .nav1").click(function() {
+            if (!$(this).next().is(":visible")) {
+                $(this).find("span").html('&ndash;');
+                $(this).next().slideDown('fast');
+            }
+            else {
+                $(this).find("span").html('+');
+                $(this).next().slideUp('fast');
+            }
+            return false;
+        });
+
+        $(".about").click(function() {
+            $(this).css("color", "#ff4040");
+            $(this).siblings().css("color", "#999");
+
+            var id = "a-"+$(this).attr("id").replace("a", "");
+
+            $("#p-about").show();
+            $("#"+id).slideDown('fast');
+            $("#"+id).siblings().slideUp('fast');
+            return false;
+        });
+    });
+    </script>
+
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div class="head1">HELLO</div>
+            <div class="head2">WORLD</div>
+        </div>
+        <div id="nav">
+            <a href="" class="nav1"><span>+</span> HTML5</a>
+            <div class="subnav">
+                <a href="/radio/" class="nav2 services">HTML5-Audio-Example</a>
+                <a href="#" class="nav2 services">HTML5-Webcam-Example</a>
+                <a href="#" class="nav2 services">Услуга 3</a>
+                <a href="#" class="nav2 services">Услуга 4</a>
+                <a href="#" class="nav2 services">Услуга 5</a>
+                <a href="#" class="nav2 services">Услуга 6</a>
+                <a href="#" class="nav2 services">Услуга 7</a>
+            </div>
+            <a href="" class="nav1"><span>+</span> CSS3</a>
+            <div class="subnav">
+                <a href="#" class="nav2 clients">Блогеры</a>
+
+            </div>
+            <a href="" class="nav1"><span>+</span> о нас</a>
+            <div class="subnav">
+                <a href="" class="nav2 about" id="avision">Миссия</a>
+                <a href="" class="nav2 about" id="ateam">Команда</a>
+                <a href="" class="nav2 about" id="amethodology">Методы</a>
+                <div id="p-about">
+                    <p id="a-team">Здесь описываем команду в двух словах. У вас нет команды? Ну тогда напишите о себе несколько хороших слов. Только помпезности поменьше, а то читатели могут не поверить.
+                    </p>
+                    <p id="a-vision">Здесь пишем фантазии на тему миссии и общечеловеческих ценностей. Главное - верить в то, что написали.
+                    </p>
+                    <p id="a-methodology">
+                        Требования &rarr; Проектирование &rarr; Макет интерфейса &rarr; Реализация &rarr; Запуск
+                    </p>
+                </div>
+            </div>
+            <a href="" class="nav1"><span>+</span> контакты</a>
+            <div class="subnav">
+                <div id="c-contact">
+                    <p class="con">
+                        <label>Приходите к нам в офис</label> 
+                        : адес
+                    </p>
+                    <div class="clear"></div>
+                    <p class="con">
+                        <label>Напишите нам письмо</label>
+                        : 123@123.com
+                    </p>
+                    <div class="clear"></div>
+                    <p class="con">
+                        <label>Следите за новостями</label>
+                        : twitter, facebook, gtalk, skype, ym
+                    </p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <a href="" class="nav1"><span>+</span> блог</a>
+            <div class="subnav">
+                <a href="#" class="nav2 blog">Запись 1</a>
+                <a href="#" class="nav2 blog">Запись 2</a>
+                <a href="#" class="nav2 blog">Запись 3</a>
+                <a href="#" class="nav2 blog">Другие записи</a>
+            </div>
+        </div>
+        <div id="footer">
+          Футер <span>2014</span>
+        </div>
+    </div>
+</body>
+</html>

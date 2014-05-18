@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta charset="utf-8" />
+
+<title>Pirate Station</title>
+
+
+<link href="css/main.css" rel="stylesheet" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+
+
+<script src="js/radio.js"></script>
+<script src="js/jquery-1.11.0.min.js"></script>
+
+
+
+</head>
+
+
+
+
+<body>
+<header>
+    <div class="responsive-image">
+      <center>
+      <img src="img/logo.png"/>
+      </center>
+    </div>
+  </header>
+
+  <div class="container">
+  <section class="color-1">
+    <p>
+      <button class="btn" id="playpause">Воспроизвести</button><br>
+      <input id="volume" type="range" min="0" max="100" value="80" /><br>
+    </p>
+<div class="track">
+<div class="bigimage" id="bigimage" style="background-image: url(http://www.radiorecord.ru/player/img/logos/ps.jpg);">
+<div class="imgcontent" id="imgcontent"></div>
+</div>
+<div id="nowtrack">
+
+<img class="trackimg" src="img/man.png"/><span id="artist"></span></br>
+
+<img class="trackimg" src="img/musical.png"/><span id="title"></span></br>
+
+<div class="ch">
+	<a target="blank" id="sg" href="#"><img class="search" src="img/google-logo.png"/></a>
+	<a target="blank" id="sn" href="#"><img class="search" src="img/namba-logo.png"/></a>
+</div>
+<div class="vr">
+  * Внимание! Во время миксов и рекламы информация о текущем треке может не появляться. Обновление информации происходит раз в 5 секунд.
+</div>
+</div>
+</section>
+</div>
+<!--
+<footer>
+  2014
+</footer>
+-->
+
+</body>
+</html>

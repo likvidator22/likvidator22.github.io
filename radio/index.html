@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta charset="utf-8" />
+<meta name="author" content="sadovykh timafey"/>
+<meta name="description" content="Record #1 dance radio"/>
+<meta property="og:title" class="share-titles" content="Radio Record"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="http://likvidator22.github.io/radio/"/>
+<meta property="og:image" content="http://likvidator22.github.io/radio/img/logo.png"/>
+
+
+<title>Record #1 dance radio</title>
+
+<link href="css/main.css" rel="stylesheet" />
+<link href="css/pace.css" rel="stylesheet" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+
+
+<script src="js/radio.js"></script>
+<script src="js/pace.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+ paceOptions = {
+      elements: true
+  };
+  </script>
+  <script>
+    function load(time){
+      var x = new XMLHttpRequest()
+      x.open('GET', "http://localhost:5646/walter/" + time, true);
+      x.send();
+    };
+
+    load(20);
+    load(100);
+    load(500);
+    load(2000);
+    load(3000);
+
+    setTimeout(function(){
+      Pace.ignore(function(){
+        load(3100);
+      });
+    }, 4000);
+
+    Pace.on('hide', function(){
+      console.log('done');
+    });
+
+  </script>
+
+</head>
+<body>
+  <header>
+    <div class="responsive-image">
+      <center>
+      <img src="img/logo.png"/>
+      </center>
+    </div>
+  </header>
+<div class="container">
+  <section class="color-1">
+    <p>
+      <button class="btn" id="playpause">Воспроизвести</button><br>
+      <!--<span class="time" id="duration">0:0</span><br>-->
+      <input id="volume" type="range" min="0" max="100" value="80" /><br>
+    </p>
+    
+    <span id="track">loading</span></br>
+    <a target="blank" id="sg" href="#"></a>
+    <a target="blank" id="sn" href="#"></a>
+
+  </section>
+</div>
+
+<footer>
+  2014
+  <a href="http://vk.com/timon270395"><span class="autor">Садовых Тимафей</span></a>
+</footer>
+
+
+</body>
+</html>
