@@ -1,6 +1,6 @@
 var init = function () {
     var audio = new Audio();
-    var stream = 'http://radio.at.aknet.kg:8008/radio_record.aac';
+    var stream = 'http://radio.at.aknet.kg:8008/pirate_station.aac';
     console.log('loadstart');
     audio.src = stream;
 
@@ -25,7 +25,7 @@ $('#volume').change(function(){
 }
 
 var oldartist = '1';
-var url = 'http://www.radiorecord.ru/xml/record_online_v3.txt'; // урл json
+var url = 'http://www.radiorecord.ru/xml/pirate_online_v3.txt'; // урл json
       function update_track_inline() {  // функция обновления текущего трека
         $.getJSON(url, function(data) {
           var key2 = data.ARTIST + '-' + data.NAME; // собираем
