@@ -1,17 +1,20 @@
 var init = function () {
     var audio = new Audio();
+    var stream = 'http://radio.at.aknet.kg:8008/radio_record.aac';
     console.log('loadstart');
-    audio.src = 'http://radio.at.aknet.kg:8008/pirat_station.aac';
-    
+    audio.src = stream;
+
     $('#playpause').click(function() {
         if (audio.paused) {
             this.textContent = 'Остановить';
+            $("#favicon").attr("href","img/fav_play.png");
             audio.play();
             return;
         }
 
         this.textContent = 'Воспроизвести';
         audio.pause();
+        $("#favicon").attr("href","favicon.png");
     });
 
 $('#volume').change(function(){
@@ -22,9 +25,10 @@ $('#volume').change(function(){
 }
 
 var oldartist = '1';
+var url = 'http://www.radiorecord.ru/xml/record_online_v3.txt'; // урл json
       function update_track_inline() {  // функция обновления текущего трека
-        $.getJSON('http://www.radiorecord.ru/xml/pirate_online_v3.txt', function(data) { // ссылка на файл с текущим треком
-          var key2 = data.ARTIST + '-' + data.NAME;
+        $.getJSON(url, function(data) {
+          var key2 = data.ARTIST + '-' + data.NAME; // собираем
           $('#sg').attr('href', 'https://www.google.ru/search?q='  + key2); // поиск гугл
           $('#sn').attr('href', 'http://namba.kg/#!/search/mp3/'  + key2); // поиск намба
           $('title').text(key2); // меняем тайтл
@@ -45,7 +49,7 @@ var oldartist = '1';
                     });
                   }
                   oldartist=val;  // запоминаем вставленную картинку, чтобы она не мерцала каждый раз при проверке трека
-                // console.log(val);
+                console.log(val);
                 }
                 break;
               }
