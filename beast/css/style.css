@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300&subset=latin,cyrillic-ext,cyrillic);
+body{
+ font-family: "Roboto",sans-serif;
+background-image: url(../img/f.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+#beast {
+background : #dadada;
+font-size: 45px;
+border : #b0b0b0 solid 1px;
+box-shadow : 0 0 0 1px #fff inset;
+color : #5d5d5d;
+padding : 3px 1px;
+margin : 6px 6px;
+text-align : center;
+border-radius : 2px;
+}
+
+.parent{
+width:700px; 
+height:100px; 
+position:absolute; 
+top:50%; 
+left:50%; 
+margin: -50px auto auto -350px;
+}
+.footer{
+background : #5d5d5d;
+border : #b0b0b0 solid 1px;
+box-shadow : 0 0 0 1px #fff inset;
+color : #fff;
+padding : 5px 8px 6px 8px;
+margin : 6px 6px;
+font-size:0.8em;
+display : inline-block;
+line-height : 14px;
+display: inline-block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 15%;
+}
+.info {
+	font-size:25px;
+background: #9394d2;
+border: #b0b0b0 solid 1px;
+box-shadow: 0 0 0 1px #fff inset;
+color: #5d5d5d;
+padding: 28px 6px 0 0;
+margin : 6px 6px;
+text-align: center;
+}
+
+
+a {
+color : #fff;
+text-decoration: none;
+}
+
+#share {
+
+}
+#social {
+
+width: 44px;
+height: 44px;
+margin: 0 -9px 0 0;
+}
