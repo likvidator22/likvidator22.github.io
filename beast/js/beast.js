@@ -7,8 +7,8 @@ if(l<10){l="0"+l;}if(m<10){m="0"+m;}if(n<10){n="0"+n;}if(a>0){b.text("Годен
 
 var sharetext = 'Годень проснется через ' +l+ ":" +m+ ":"+n;
 	console.log(sharetext);
-	var image ="/img/image.png";
-	var url = 'http://piratestation.tk';
+	var image ="http://likvidator22.github.io/beast/img/image.png";
+	var url = 'http://likvidator22.github.io/beast/';
 	$('#fb').attr('href', 'http://www.facebook.com/sharer.php?s=100&p[title]='+ sharetext + '[url]='+ url +'&p[images][0]=' + image);
 	$('#tw').attr('href', 'http://twitter.com/share?text=' + sharetext + '&url='+ url +'&counturl=' + url);
 	$('#lj').attr('href', 'http://livejournal.com/update.bml?subject=' + sharetext + '-' + url + '&transform=1');
