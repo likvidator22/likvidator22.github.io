@@ -1,6 +1,6 @@
 var init = function () {
     var audio = new Audio();
-    var stream = 'http://radio.at.aknet.kg:8008/pirat_station.aac';
+    var stream = 'http://radio.at.aknet.kg:8008/pirat_station.mp3';
     console.log('loadstart');
     audio.src = stream;
 

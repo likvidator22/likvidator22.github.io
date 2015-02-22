@@ -1,6 +1,6 @@
 ﻿var audio = new Audio(); // Audio() тег
 console.log('loadstart');
-audio.setAttribute("src", "http://radio.at.aknet.kg:8008/radio_record.aac"); // атрибут scr 
+audio.setAttribute("src", "http://radio.at.aknet.kg:8008/radio_record_bishkek.mp3"); // атрибут scr 
 audio.setAttribute("type", "audio/mpeg"); // MIME
 
 // обработчик нажатия на бутон
