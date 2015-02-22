@@ -1,0 +1,38 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300&subset=latin,cyrillic-ext,cyrillic);
+body{
+  font-family: "Roboto Thin",sans-serif;
+}
+.mashinka {
+  width: 34px;
+  height: 64px;
+  overflow: hidden;
+  position: relative;
+  background: url(../ima/mashina_kuppi_stat.png);
+  transition-duration: 0.5s;
+}
+
+.mashinka:hover {
+  width: 72px;
+  height: 64px;
+  overflow: hidden;
+  position: relative;
+  background: url(../ima/mashina_kuppi.png);
+  transition-duration: 0.5s;
+}
+
+.mashinka-auto {
+  position: absolute;
+  right: 0px;
+  top: 160px;
+  bottom: 0px;
+  height: auto;
+  background-color: transparent;
+  margin: 0;
+}
+#arrow{
+position: absolute;
+right: 100px;
+top: 30px;
+bottom: 0px;
+height: 300px;
+}
